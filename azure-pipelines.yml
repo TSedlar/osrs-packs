@@ -1,12 +1,10 @@
-trigger:
-- master
-
 schedules:
 - cron: "*/30 * * * *"
-  displayName: Every 30 minutes
+  displayName: "E"very 30 minutes"
   branches:
     include:
     - master
+  always: "true"
 
 resources:
   containers:
