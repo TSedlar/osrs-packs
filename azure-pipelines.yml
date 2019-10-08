@@ -1,6 +1,13 @@
 trigger:
 - master
 
+schedules:
+- cron: "*/30 * * * *"
+  displayName: Every 30 minutes
+  branches:
+    include:
+    - master
+
 resources:
   containers:
   - container: groovy-git
