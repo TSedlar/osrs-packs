@@ -1,0 +1,22 @@
+trigger:
+- master
+
+resources:
+  containers:
+  - container: groovy-git
+    image: alxsoft/groovy-git:2.5.2-jdk8
+    options: --user 0:0
+
+jobs:
+- job: Download_Gamepack
+  container: groovy-git
+  steps:
+  - bash: |
+      git checkout master
+      git remote rm origin
+      git remote add origin "https://$GIT_USER:$(GIT_TOKEN)@github.com/$GIT_USER/osrs-packs.git"
+      git config user.name $GIT_USER
+      git config user.email $GIT_EMAIL
+      osrs_rev=$(groovy OSRSDownloader.groovy)
+      git add .
+      git diff-index --quiet HEAD || git commit -am "Added ${osrs_rev}.jar [skip ci]" && git push origin master
