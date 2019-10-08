@@ -1,6 +1,6 @@
 schedules:
 - cron: "*/30 * * * *"
-  displayName: "E"very 30 minutes"
+  displayName: Every 30 minutes
   branches:
     include:
     - master
