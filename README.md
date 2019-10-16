@@ -1,6 +1,6 @@
 # osrs-packs
 
-[![Actions Status](https://github.com/TSedlar/osrs-packs/workflows/CI/badge.svg)](https://github.com/TSedlar/osrs-packs/actions)
+[![Actions Status](https://github.com/TSedlar/osrs-packs/workflows/CI/badge.svg?event=schedule)](https://github.com/TSedlar/osrs-packs/actions)
 
 All of the gamepacks listed under [packs](packs/) are automatically uploaded to this repository.
 
