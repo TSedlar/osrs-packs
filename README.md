@@ -1,6 +1,6 @@
 # osrs-packs
 
-[![Build Status](https://dev.azure.com/sedlarizona/osrs-packs/_apis/build/status/TSedlar.osrs-packs?branchName=master)](https://dev.azure.com/sedlarizona/osrs-packs/_build/latest?definitionId=1&branchName=master)
+[![Actions Status](https://github.com/TSedlar/osrs-packs/workflows/CI/badge.svg)](https://github.com/TSedlar/osrs-packs/actions)
 
 All of the gamepacks listed under [packs](packs/) are automatically uploaded to this repository.
 
