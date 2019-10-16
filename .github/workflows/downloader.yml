@@ -5,21 +5,22 @@ on:
     - cron:  0 * * * *
 
 jobs:
-  
-  prepare:
+  check_skip_ci:
+    if: "contains(github.event.head_commit.message, '[skip ci]')"
+    
     runs-on: ubuntu-latest
-    if: "! contains(github.event.head_commit.message, '[skip ci]')"
+    
     steps:
-      - run: echo "${{ github.event.head_commit.message }}"
+      - run: echo "CI was skipped"
   
   update_gamepack:
-    needs: prepare
+    if: "! contains(github.event.head_commit.message, '[skip ci]')"
+    
+    runs-on: ubuntu-latest
     
     container:
       image: alxsoft/groovy-git:2.5.2-jdk8
       options: --user 0:0
-
-    runs-on: ubuntu-latest
     
     steps:
     - uses: actions/checkout@master
