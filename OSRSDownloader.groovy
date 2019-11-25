@@ -9,7 +9,7 @@ import static io.disassemble.javanalysis.util.insn.query.InsnQueryKt.*
 
 // Download the gamepack jar
 new File("./gamepack.jar").withOutputStream { out ->
-    new URL("http://oldschool1.runescape.com/gamepack.jar").withInputStream { from ->  out << from; }
+    new URL("http://oldschool7.runescape.com/gamepack.jar").withInputStream { from ->  out << from; }
 }
 
 // Load gamepack jar into memory
