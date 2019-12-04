@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     
     container:
-      image: alxsoft/groovy-git:2.5.2-jdk8
+      image: groovy:jdk8
       options: --user 0:0
     
     steps:
