@@ -1,6 +1,8 @@
 name: CI
 
-on: [push]
+on:
+  schedule:
+    - cron:  0 * * * *
 
 jobs:
   check_skip_ci:
