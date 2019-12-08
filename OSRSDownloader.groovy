@@ -7,10 +7,7 @@ import java.nio.file.Files
 
 import static io.disassemble.javanalysis.util.insn.query.InsnQueryKt.*
 
-// Download the gamepack jar
-new File("./gamepack.jar").withOutputStream { out ->
-    new URL("http://oldschool7.runescape.com/gamepack.jar").withInputStream { from ->  out << from; }
-}
+// Jar already downloaded via wget
 
 // Load gamepack jar into memory
 def ctc = new CtClassScanner()
