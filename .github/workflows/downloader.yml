@@ -25,7 +25,7 @@ jobs:
     - name: Install Groovy
       run: |
         sudo apt-get install groovy
-    - name: Deploy gamepack
+    - name: Download/Deploy gamepack
       run: |
         REPO=$(echo ${{ github.repository }} | sed "s:.*/::")
         BRANCH=$(echo ${{ github.ref }} | sed "s:.*/::")
@@ -34,6 +34,8 @@ jobs:
         git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.actor }}/${REPO}.git"
         git config user.name ${{ github.actor }}
         git config user.email noreply@${{ github.actor }}.noreply.github.com
+        
+        wget -T 600 http://oldschool7.runescape.com/gamepack.jar
         
         OSRS_REV=$(groovy OSRSDownloader.groovy)
         
