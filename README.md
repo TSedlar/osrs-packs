@@ -4,6 +4,6 @@
 
 All of the gamepacks listed under [packs](packs/) are automatically uploaded to this repository.
 
-The code for retrieval and labeling of gamepacks can be seen in [OSRSDownloader](OSRSDownloader.groovy)
+The code for labeling of gamepacks can be seen in [OSRSRenamer](OSRSRenamer.groovy)
 
 The most current gamepack is checked for every 30 minutes on Azure as a scheduled CI pipeline build.
