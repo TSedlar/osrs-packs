@@ -37,7 +37,7 @@ jobs:
         
         wget -T 600 http://oldschool7.runescape.com/gamepack.jar
         
-        OSRS_REV=$(groovy OSRSDownloader.groovy)
+        OSRS_REV=$(groovy OSRSRenamer.groovy)
         
         git add .
         git diff-index --quiet HEAD || git commit -am "Added ${OSRS_REV}.jar [skip ci]" && git push origin HEAD:${BRANCH}
